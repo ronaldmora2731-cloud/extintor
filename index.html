@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extintor Clase A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pagina">
+    <section class="cartel" aria-labelledby="tituloExtintor">
+      <header class="encabezado">
+        <h1 id="tituloExtintor">EXTINTOR</h1>
+      </header>
+
+      <p class="subtitulo">ÚSELO ÚNICAMENTE EN FUEGO CLASE</p>
+
+      <div class="clase-a" aria-label="Clase A">
+        <div class="triangulo">
+          <span>A</span>
+        </div>
+      </div>
+
+      <button class="icono-fuego" id="iconoFuego" type="button"
+              aria-label="Fuego de sólidos combustibles">
+        <span class="basurero"></span>
+        <span class="madera madera-1"></span>
+        <span class="madera madera-2"></span>
+        <span class="llama llama-1"></span>
+        <span class="llama llama-2"></span>
+        <span class="llama llama-3"></span>
+      </button>
+
+      <div class="descripcion">
+        <strong>SÓLIDOS COMBUSTIBLES</strong>
+        <span>madera, papel,</span>
+        <span>tela, basura</span>
+        <span>cartones</span>
+      </div>
+
+      <section class="metodo">
+        <h2>MÉTODO PARA UTILIZARLO</h2>
+        <ol>
+          <li>Sosténgalo en posición vertical.</li>
+          <li>Retire el seguro.</li>
+          <li>Oprima la palanca.</li>
+          <li>Dirija la descarga contra la base de la llama.</li>
+        </ol>
+      </section>
+
+      <div class="franjas" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <p class="estado" id="estadoSonido">Pase el cursor sobre el fuego.</p>
+  </main>
+
+  <audio id="audioFuego" src="fuego.wav" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>

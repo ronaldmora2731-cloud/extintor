@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --rojo: #c8000d;
+  --azul: #173c87;
+  --verde: #087a38;
+  --negro: #111;
+  --papel: #f8f8f5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(90deg, #efefef 0 72%, #e2e2e2 72% 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--negro);
+}
+
+.pagina {
+  width: 100%;
+  padding: 26px 14px;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.cartel {
+  width: min(700px, 94vw);
+  min-height: 880px;
+  padding: 20px 30px 24px;
+  background: var(--papel);
+  border: 12px solid #e8e8e6;
+  box-shadow: 0 8px 25px rgba(0,0,0,.16);
+  transform: rotate(-0.8deg);
+}
+
+.encabezado {
+  background: var(--rojo);
+  padding: 4px 10px 0;
+  text-align: center;
+}
+
+.encabezado h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(60px, 10vw, 108px);
+  line-height: .95;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  margin: 18px 0 10px;
+  text-align: center;
+  font-size: clamp(22px, 4vw, 37px);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.clase-a {
+  display: grid;
+  place-items: center;
+  margin-top: 8px;
+}
+
+.triangulo {
+  width: 0;
+  height: 0;
+  border-left: 58px solid transparent;
+  border-right: 58px solid transparent;
+  border-bottom: 102px solid var(--verde);
+  position: relative;
+}
+
+.triangulo::after {
+  content: "";
+  position: absolute;
+  left: -43px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-left: 43px solid transparent;
+  border-right: 43px solid transparent;
+  border-bottom: 74px solid var(--papel);
+}
+
+.triangulo span {
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  left: -17px;
+  color: var(--verde);
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.icono-fuego {
+  width: 155px;
+  height: 130px;
+  display: block;
+  margin: 18px auto 10px;
+  position: relative;
+  border: 0;
+  border-radius: 18px;
+  background: var(--azul);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.icono-fuego:hover,
+.icono-fuego:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 5px rgba(200,0,13,.15);
+}
+
+.basurero {
+  position: absolute;
+  left: 31px;
+  bottom: 24px;
+  width: 44px;
+  height: 55px;
+  background: #ded9c7;
+  clip-path: polygon(7% 0, 93% 0, 82% 100%, 18% 100%);
+}
+
+.basurero::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: -8px;
+  width: 31px;
+  height: 7px;
+  background: #ded9c7;
+}
+
+.madera {
+  position: absolute;
+  right: 22px;
+  bottom: 24px;
+  width: 50px;
+  height: 11px;
+  border-radius: 6px;
+  background: #e6e1cf;
+  transform-origin: center;
+}
+
+.madera-1 { transform: rotate(18deg); }
+.madera-2 { transform: rotate(-17deg); bottom: 17px; }
+
+.llama {
+  position: absolute;
+  background: #f0ead8;
+  border-radius: 70% 0 70% 70%;
+  transform: rotate(45deg);
+  animation: flame 550ms ease-in-out infinite alternate;
+}
+
+.llama-1 {
+  width: 35px; height: 58px;
+  right: 35px; top: 22px;
+}
+.llama-2 {
+  width: 24px; height: 41px;
+  right: 64px; top: 37px;
+  animation-delay: 100ms;
+}
+.llama-3 {
+  width: 18px; height: 32px;
+  right: 23px; top: 46px;
+  animation-delay: 180ms;
+}
+
+@keyframes flame {
+  from { transform: rotate(45deg) scale(.94) translateY(2px); }
+  to   { transform: rotate(45deg) scale(1.08) translateY(-2px); }
+}
+
+.descripcion {
+  display: grid;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.descripcion strong {
+  font-size: 18px;
+}
+
+.metodo {
+  margin-top: 22px;
+}
+
+.metodo h2 {
+  margin: 0 0 4px;
+  color: var(--azul);
+  font-size: clamp(28px, 4.5vw, 43px);
+  line-height: 1;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.metodo ol {
+  width: fit-content;
+  margin: 6px auto 0;
+  padding-left: 28px;
+  font-size: clamp(18px, 2.7vw, 27px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.franjas {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 1fr;
+  gap: 45px;
+  height: 170px;
+  margin-top: 18px;
+  overflow: hidden;
+}
+
+.franjas span {
+  background: var(--rojo);
+  transform: skewX(-18deg);
+}
+
+.estado {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #444;
+}
+
+.estado.activo {
+  color: var(--rojo);
+}
+
+@media (max-width: 650px) {
+  .cartel {
+    min-height: auto;
+    padding: 15px 18px 18px;
+    border-width: 8px;
+  }
+
+  .icono-fuego {
+    width: 125px;
+    height: 108px;
+  }
+
+  .franjas {
+    height: 110px;
+    gap: 25px;
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "extintor",
+  "version": "1.0.0",
+  "description": "Recreación del cartel usando HTML y CSS desde cero. La fotografía solo fue utilizada como referencia visual y no forma parte de la interfaz.",
+  "main": "script.js",
+  "scripts": {
+  "deploy": "gh-pages -d ."
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronaldmora2731-cloud/extintor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ronaldmora2731-cloud/extintor/issues"
+  },
+  "homepage": "https://github.com/ronaldmora2731-cloud/extintor#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
